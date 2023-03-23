@@ -1,0 +1,30 @@
+replicaCount: 1
+
+hostname: "my-hostname.com"
+clusterIssuer: "letsencrypt-example"
+ingressClass: "nginx-example"
+authUrl: "https://my-hostname.com/oauth2/auth"
+signinUrl: "https://my-hostname.com/oauth2/start?rd=$escaped_request_uri"
+
+oauthConfig:
+  redirectUrl: "https://my-hostname.com/oauth2/callback"
+  oidcIssuerUrl: "https://my-issuer.eu.auth0.com/"
+  clientId: "MyClientID"
+  clientSecret: "MyClientSecret"
+  cookieName: "yummy_cookie"
+  cookieSecret: "myCookieSecret"
+  emailDomains: "example.com"
+  port: "4180"
+  provider: "oidc"
+  upstreams: "https://my-hostname.com/"
+
+app:
+  port: "8080"
+
+resources:
+  limits:
+    cpu: 1
+    memory: 64Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi

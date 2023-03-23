@@ -1,0 +1,7 @@
+apiVersion: v1
+appVersion: 0.1.0
+description: Provide an oauth proxy to a wab app
+home: https://github.com/Qovery/
+name: portal
+type: application
+version: 0.1.0
